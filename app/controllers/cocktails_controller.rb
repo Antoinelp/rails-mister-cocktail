@@ -6,6 +6,8 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @dose = Dose.new
+    @ingredient = Ingredient.new
   end
 
   def new
@@ -26,8 +28,8 @@ class CocktailsController < ApplicationController
   end
 
   def update
-    @cocktail = Cocktail.update(cocktail_params)
-    if cocktail.save
+    @cocktail.update(cocktail_params)
+    if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
       render :new
@@ -35,7 +37,7 @@ class CocktailsController < ApplicationController
   end
 
   def destroy
-    @cocktail.delete
+    @cocktail.destroy
     redirect_to cocktails_path
   end
 

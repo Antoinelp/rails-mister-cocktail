@@ -1,5 +1,29 @@
-<h3> Cocktails list </h3>
+<h1> Cocktails list </h1>
 
-<% @cocktails.each do |cocktail| %>
-  <%= cocktail.name %>
-<% end %>
+
+
+<div class="cocktail-add-link">
+  <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+</div>
+
+<div class="cocktails">
+  <% @cocktails.each do |cocktail| %>
+    <div class="cocktail-card">
+      <%= image_tag 'amaretto.jpeg', alt: "alttext", width: "351px", height: "200px" %>
+      <div class="cocktail-name">
+        <strong><%= link_to cocktail.name, cocktail_path(cocktail), id: "btn-blue" %></strong>
+      </div>
+      <div class="cocktail-link">
+        <%= link_to 'More info', cocktail_path(cocktail), id: "btn-blue" %> |
+        <%= link_to "Edit", edit_cocktail_path(cocktail), id: "btn-green" %> |
+        <%= link_to "Delete", cocktail_path(cocktail), method: :delete, id: "btn-red" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+

@@ -1,2 +1,91 @@
 // Import page-specific CSS files here.
 @import "home";
+
+h1 {
+  text-align: center;
+}
+
+.cocktail-add-link {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.cocktails {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.cocktail-card {
+  box-shadow: 1px 3px 6px rgba(200,200,200,0.7);
+  margin: 10px;
+  padding: 10px;
+}
+
+.cocktail-link {
+  padding-top: 5px;
+}
+
+#btn-red {
+  color: #FD1014;
+  opacity: 0.6;
+}
+
+#btn-red:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+#btn-green {
+  color: green;
+  opacity: 0.6;
+}
+
+#btn-green:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+#btn-blue {
+  opacity: 0.8;
+}
+
+#btn-blue:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cocktails {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cocktails {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cocktails {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cocktails {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .flats {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
