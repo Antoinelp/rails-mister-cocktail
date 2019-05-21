@@ -1,7 +1,6 @@
 <h1> Cocktails list </h1>
 
 
-
 <div class="cocktail-add-link">
   <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
 </div>
@@ -9,7 +8,7 @@
 <div class="cocktails">
   <% @cocktails.each do |cocktail| %>
     <div class="cocktail-card">
-      <%= image_tag 'amaretto.jpeg', alt: "alttext", width: "351px", height: "200px" %>
+      <%= image_tag "#{cocktail.name}.jpeg", alt: "alttext", width: "351px", height: "200px", id: "cocktail-picture" %>
       <div class="cocktail-name">
         <strong><%= link_to cocktail.name, cocktail_path(cocktail), id: "btn-blue" %></strong>
       </div>
