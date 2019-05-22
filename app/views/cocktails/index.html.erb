@@ -8,7 +8,7 @@
 <div class="cocktails">
   <% @cocktails.each do |cocktail| %>
     <div class="cocktail-card">
-      <%= image_tag "Mojito.jpeg", alt: "alttext", width: "351px", height: "200px", id: "cocktail-picture" %>
+      <%= image_tag "", alt: "alttext", width: "351px", height: "200px", id: "cocktail-picture" %>
       <div class="cocktail-name">
         <strong><%= link_to cocktail.name, cocktail_path(cocktail), id: "btn-blue" %></strong>
       </div>
